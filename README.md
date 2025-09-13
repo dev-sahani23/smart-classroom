@@ -14,9 +14,10 @@ Perfect for building interactive classroom applications with lightning-fast perf
 ## 📌 Table of Contents
 
 - [Features](#-features)
-- [Demo](#-demo)
 - [Getting Started](#-getting-started)
-- [Build for Production](#-build-for-production)
+- [Clone the repo](#1️⃣-clone-the-repository)
+- [Intsall Dependencies](#2️⃣-install-dependencies)
+- [Start Development server](#3️⃣-start-the-development-server)
 - [Tech Stack](#-tech-stack)
 - [Contributing](#-contributing)
 - [License](#-license)
@@ -33,28 +34,26 @@ Perfect for building interactive classroom applications with lightning-fast perf
 
 ---
 
-## 🎬 Demo
-
-*(Add your live demo link or screenshots/GIFs here)*
-
----
-
 ## 💻 Getting Started
 
 Follow these steps to get a local copy running:
 
-### 1️⃣ Clone the repository
+## 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/dev-sahani23/smart-classroom.git
 cd smart-classroom
+```
 
-2️⃣ Install dependencies
+## 2️⃣ Install dependencies
+```
 npm install
+```
 
-3️⃣ Start the development server
+## 3️⃣ Start the development server
+```
 npm run dev
-
+```
 
 Open http://localhost:5173
  to view your app in the browser.
@@ -64,7 +63,8 @@ npm run build
 
 
 This will create an optimized production build in the dist folder.
-⚡ Tech Stack
+
+## ⚡ Tech Stack
 | Layer      | Technology        |
 | ---------- | ----------------- |
 | Frontend   | React             |
@@ -72,19 +72,21 @@ This will create an optimized production build in the dist folder.
 | Styling    | CSS / TailwindCSS |
 | Language   | JavaScript        |
 
-🤝 Contributing
+## 🤝 Contributing
 
 Fork the project
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
+Create your feature branch
+```
+git checkout -b feature/AmazingFeature
+```
 Commit your changes (git commit -m 'Add some feature')
 
 Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License. See the LICENSE
  file for details.
@@ -93,7 +95,3 @@ This project is licensed under the MIT License. See the LICENSE
 
 
 ---
-
-If you want, I can **make it even more stylish with emojis, colored badges, and a GIF demo preview**, so your GitHub page really pops.  
-
-Do you want me to do that next?
