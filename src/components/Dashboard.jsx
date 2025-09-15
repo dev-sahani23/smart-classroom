@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const ConstraintsForm = () => {
+const Dashboard = () => {
   const [formData, setFormData] = useState({
     classrooms: "",
     batches: "",
@@ -37,7 +37,10 @@ const ConstraintsForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/save-constraints", formData);
+      const response = await axios.post(
+        "http://localhost:5000/save-constraints",
+        formData
+      );
       alert("Constraints saved successfully!");
       console.log(response.data);
     } catch (error) {
@@ -50,8 +53,9 @@ const ConstraintsForm = () => {
     <div className="flex justify-center items-start p-6 overflow-auto min-h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl space-y-4  h-215 overflow-y-auto"
+        className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl space-y-4 h-215 overflow-y-auto"
       >
+        <h1 className="text-3xl font-bold mb-6 text-center">Dashboard</h1>
         <h2 className="text-2xl font-bold mb-4">Enter Constraints</h2>
 
         <label>
@@ -210,4 +214,4 @@ const ConstraintsForm = () => {
   );
 };
 
-export default ConstraintsForm;
+export default Dashboard;
