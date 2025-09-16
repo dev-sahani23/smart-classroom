@@ -1,9 +1,10 @@
 from flask import Flask, jsonify, request
 from config import Config
-from models import db, User
+from models import db, User, Constraints
 from sqlalchemy import inspect
 from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
+import json
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
@@ -11,15 +12,32 @@ app.config.from_object(Config)
 
 db.init_app(app)
 
-constraints_data = {}
-
 @app.route("/save-constraints", methods=["POST"])
 def save_constraints():
     data = request.get_json()
-    constraints_data.update(data)
-    print("Received Constraints:", constraints_data)
-    return jsonify({"message": "Constraints saved successfully!"})
+    try:
+        new_constraints = Constraints(
+            classrooms=data['classrooms'],
+            batches=data['batches'],
+            subjects_count=data['subjectsCount'],
+            subject_names=json.dumps(data['subjectNames']),
+            max_classes_per_day=data['maxClassesPerDay'],
+            classes_per_subject_per_week=data['classesPerSubjectPerWeek'],
+            faculties_count=data['facultiesCount'],
+            average_leaves=data['averageLeaves'],
+            special_classes=json.dumps(data['specialClasses'])
+        )
+        db.session.add(new_constraints)
+        db.session.commit()
+        return jsonify({"message": "Constraints saved successfully!", "data": new_constraints.to_dict()})
+    except Exception as e:
+        print("Error:", e)
+        return jsonify({"error": str(e)}), 500
 
+@app.route("/get-constraints", methods=["GET"])
+def get_constraints():
+    all_constraints = Constraints.query.all()
+    return jsonify([c.to_dict() for c in all_constraints])
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
