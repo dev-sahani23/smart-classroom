@@ -91,7 +91,7 @@ Open a Pull Request
 This project is licensed under the MIT License. See the LICENSE
  file for details.
 
-✨ Made with ❤️ by Dev
+✨ Made with ❤️ by Techie Brainstormers
 
 
 ---
